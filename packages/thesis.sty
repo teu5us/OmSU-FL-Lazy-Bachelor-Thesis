@@ -38,8 +38,8 @@
 
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Заполнитель для всех заголовков
 \renewcommand{\cfttoctitlefont}{\normalsize\bfseries} % 14 жирный шрифт для заголовка содержания
-\setlength{\cftbeforesecskip}{\onehalfspacing} % Полуторный интервал в содержании
-\setlength{\cftbeforepartskip}{\onehalfspacing} % Полуторный интервал в содержании
+\setlength{\cftbeforesecskip}{\linespread{1.43}} % Полуторный интервал в содержании
+\setlength{\cftbeforepartskip}{\linespread{1.43}} % Полуторный интервал в содержании
 \setlength{\cftsecindent}{-1.5em} % Отключает абзацный отступ в содержании
 \setlength{\cftsubsecindent}{0em} % Отключает абзацный отступ в содержании
 \setlength{\cftsubsubsecindent}{0em} % Отключает абзацный отступ в содержании
@@ -95,3 +95,6 @@
 
 \UseMicrotypeSet[protrusion]{basicmath}
 \pgfplotsset{compat=1.16}
+
+% --- Интервал --- %
+\linespread{1.43}

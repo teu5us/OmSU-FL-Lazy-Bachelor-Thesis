@@ -7,7 +7,6 @@
 \usepackage[english,russian]{babel}
 \usepackage{amsmath}
 \usepackage{geometry}
-\usepackage{extsizes}
 \usepackage{fontspec}
 \usepackage{fancyhdr}
 \usepackage{setspace}
@@ -18,16 +17,25 @@
 \usepackage{microtype}
 \usepackage{pgfplots}
 \usepackage{pgf-pie}
-\usepackage{tocloft}
 \usepackage[colorlinks=true, linkcolor=black,linktoc=all]{hyperref} % Оформляет содержание как ссылки
+\DisemulatePackage{setspace}
+\usepackage{setspace}
 
 % Поля
 \geometry{a4paper, heightrounded, left=3cm, right=1cm, top=2cm, bottom=2cm}
 
 % --- Оформление содержания --- %
+\setlength{\cftsectionindent}{0em}
+\setlength{\cftsubsectionindent}{0em}
+\setlength{\cftsubsubsectionindent}{0em}
+\setlength{\cftsectionnumwidth}{0em}
+\setlength{\cftsubsectionnumwidth}{1.5em}
+\setlength{\cftsubsubsectionnumwidth}{2.5em}
 
 % Номер введения -- 0
 \setcounter{section}{-1}
+\setcounter{tocdepth}{6}
+\setsecnumdepth{subsubsection}
 
 \makeatletter
 % Отключение номеров для заголовков первого уровня
@@ -35,14 +43,6 @@
 % Правильная нумерация заголовков второго уровня
 \renewcommand{\thesubsection}{\ifx\label\@gobble\else\fi\arabic{section}.\arabic{subsection}}
 \makeatother
-
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Заполнитель для всех заголовков
-\renewcommand{\cfttoctitlefont}{\normalsize\bfseries} % 14 жирный шрифт для заголовка содержания
-\setlength{\cftbeforesecskip}{\linespread{1.43}} % Полуторный интервал в содержании
-\setlength{\cftbeforepartskip}{\linespread{1.43}} % Полуторный интервал в содержании
-\setlength{\cftsecindent}{-1.5em} % Отключает абзацный отступ в содержании
-\setlength{\cftsubsecindent}{0em} % Отключает абзацный отступ в содержании
-\setlength{\cftsubsubsecindent}{0em} % Отключает абзацный отступ в содержании
 
 % --- Оформление заголовков --- %
 
@@ -97,4 +97,4 @@
 \pgfplotsset{compat=1.16}
 
 % --- Интервал --- %
-\linespread{1.43}
+\onehalfspacing

@@ -1,13 +1,21 @@
 \documentclass[../base.tex]{subfiles}
 
 \begin{document}
-\renewcommand*\contentsname{\hspace{0.75cm}Содержание \hfill}
+\renewcommand*\contentsname{\hspace{0.75cm}\normalsize{Содержание}\hfill}
 
-\tableofcontents
+\frontmatter
+\pagenumbering{gobble}
+\begingroup
+\setlength{\beforechapskip}{-1.5em}
+\setlength{\afterchapskip}{0pt}
+\tableofcontents*
+\endgroup
+
+\mainmatter
 
 \thispagestyle{empty}
 \end{titlepage}
 \pagenumbering{arabic}
-\setcounter{page}{4}
+\setcounter{page}{2}
 \pagebreak
 \end{document}

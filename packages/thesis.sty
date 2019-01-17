@@ -6,20 +6,19 @@
 \usepackage[T1,T2A]{fontenc}
 \usepackage[english,russian]{babel}
 \usepackage{amsmath}
-\usepackage{geometry}
-\usepackage{fontspec}
+\usepackage{geometry} % Бумага и поля
+\usepackage{fontspec} % Задает шрифт
 \usepackage{fancyhdr}
-\usepackage{setspace}
-\usepackage{indentfirst}
-\usepackage{enumitem}
+\usepackage{indentfirst} % Абзацный отступ перед первым абзацем
+\usepackage{enumitem} % Аккуратные списки
 \usepackage{cmap}
-\usepackage{titlesec}
+\usepackage{titlesec} % Форматирование заголовков
 \usepackage{microtype}
 \usepackage{pgfplots}
 \usepackage{pgf-pie}
 \usepackage[colorlinks=true, linkcolor=black,linktoc=all]{hyperref} % Оформляет содержание как ссылки
-\DisemulatePackage{setspace}
-\usepackage{setspace}
+\DisemulatePackage{setspace} % Для полуторного интервала
+\usepackage{setspace} % Для полуторного интервала
 
 % Поля
 \geometry{a4paper, heightrounded, left=3cm, right=1cm, top=2cm, bottom=2cm}
@@ -32,10 +31,9 @@
 \setlength{\cftsubsectionnumwidth}{1.5em}
 \setlength{\cftsubsubsectionnumwidth}{2.5em}
 
-% Номер введения -- 0
-\setcounter{section}{-1}
-\setcounter{tocdepth}{6}
-\setsecnumdepth{subsubsection}
+\setcounter{section}{-1} % Номер введения -- 0
+\setcounter{tocdepth}{6} % Включить в содержание больше типов заголовков
+\setsecnumdepth{subsubsection} % Нумерация заголовков второго уровня
 
 \makeatletter
 % Отключение номеров для заголовков первого уровня
